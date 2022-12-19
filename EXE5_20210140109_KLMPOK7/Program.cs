@@ -5,6 +5,7 @@ namespace Exercise
     class Node
     {
         public int number;
+        public string name;
         public Node next;
     }
 
@@ -21,10 +22,14 @@ namespace Exercise
         public void addNumb()
         {
             int no;
+            string nm;
             Console.WriteLine("Enter a number: ");
             no = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter a name: ");
+            nm = Console.ReadLine();
             Node newnode = new Node();
             newnode.number = no;
+            newnode.name = nm;
             if(salman == null || (no <= salman.number))
             {
                 if((salman != null) && (no == salman.number))
@@ -61,7 +66,7 @@ namespace Exercise
         {
             Node curr;
             curr = salman;
-            Console.WriteLine("The deleted number is: " + salman);
+            Console.WriteLine("The deleted node is: " + salman.number + " " + salman.name);
             salman = salman.next;
         }
 
@@ -73,10 +78,10 @@ namespace Exercise
             }
             else
             {
-                Console.WriteLine("The numbers in the list are: ");
+                Console.WriteLine("The records in the list are: ");
                 Node currNode;
                 for(currNode = salman; currNode != null; currNode = currNode.next)
-                    Console.WriteLine(" - " + currNode.number);
+                    Console.WriteLine(" - " + currNode.number + "." + currNode.name);
                 Console.WriteLine();
             }
         }
@@ -91,8 +96,8 @@ namespace Exercise
                 try
                 {
                     Console.WriteLine("\n Menu ");
-                    Console.WriteLine("a. Insert Number");
-                    Console.WriteLine("b. Delete Number");
+                    Console.WriteLine("a. Insert Record");
+                    Console.WriteLine("b. Delete Record");
                     Console.WriteLine("c. Display");
                     Console.WriteLine("d. Exit");
                     Console.Write("Choice a-d :");
