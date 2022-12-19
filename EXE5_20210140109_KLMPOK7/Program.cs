@@ -25,7 +25,18 @@ namespace Exercise
             no = Convert.ToInt32(Console.ReadLine());
             Node newnode = new Node();
             newnode.number = no;
-
+            if(salman == null || (no <= salman.number))
+            {
+                if((salman != null) && (no == salman.number))
+                {
+                    Console.WriteLine("Duplicate number is not allowed");
+                    return;
+                }
+                newnode.next = salman;
+                newnode.next = luthfi;
+                salman = luthfi = newnode;
+                return;
+            }
         }
     }
 }
