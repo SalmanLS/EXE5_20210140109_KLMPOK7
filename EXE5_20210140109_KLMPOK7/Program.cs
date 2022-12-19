@@ -46,7 +46,7 @@ namespace Exercise
                 }
                 luthfi.next = newnode;
                 newnode = luthfi;
-
+                return;
             }
         }
         public bool listEmpty()
@@ -61,6 +61,7 @@ namespace Exercise
         {
             Node curr;
             curr = salman;
+            Console.WriteLine("The deleted number is: " + salman);
             salman = salman.next;
         }
 
@@ -90,7 +91,7 @@ namespace Exercise
                 try
                 {
                     Console.WriteLine("\n Menu ");
-                    Console.WriteLine("a. Inset Number");
+                    Console.WriteLine("a. Insert Number");
                     Console.WriteLine("b. Delete Number");
                     Console.WriteLine("c. Display");
                     Console.WriteLine("d. Exit");
