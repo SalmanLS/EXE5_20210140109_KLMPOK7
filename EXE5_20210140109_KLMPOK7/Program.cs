@@ -63,5 +63,22 @@ namespace Exercise
             curr = salman;
             salman = salman.next;
         }
+
+        public void displayNumb()
+        {
+            if (listEmpty())
+            {
+                Console.WriteLine("List is empty. ");
+            }
+            else
+            {
+                Console.WriteLine("The numbers in the list are: ");
+                Node currNode;
+                for(currNode = salman; currNode != null; currNode = currNode.next)
+                    Console.WriteLine(" - " + currNode.number);
+                Console.WriteLine();
+            }
+        }
     }
+
 }
