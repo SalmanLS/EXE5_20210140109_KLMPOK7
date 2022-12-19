@@ -37,6 +37,17 @@ namespace Exercise
                 salman = luthfi = newnode;
                 return;
             }
+            while ((salman != null)&&(no >= luthfi.number))
+            {
+                if(no == luthfi.number)
+                {
+                    Console.WriteLine("Duplicate number is not allowed");
+                    return;
+                }
+                luthfi.next = newnode;
+                newnode = luthfi;
+
+            }
         }
     }
 }
