@@ -23,7 +23,7 @@ namespace Exercise
         {
             int no;
             string nm;
-            Console.WriteLine("Enter a number: ");
+            Console.Write("Enter a number: ");
             no = Convert.ToInt32(Console.ReadLine());
             Console.Write("Enter a name: ");
             nm = Console.ReadLine();
@@ -50,7 +50,7 @@ namespace Exercise
                     return;
                 }
                 luthfi.next = newnode;
-                newnode = luthfi;
+                luthfi = newnode;
                 return;
             }
         }
@@ -64,8 +64,6 @@ namespace Exercise
 
         public void delNumb()
         {
-            Node curr;
-            curr = salman;
             Console.WriteLine("The deleted node is: " + salman.number + " " + salman.name);
             salman = salman.next;
         }
