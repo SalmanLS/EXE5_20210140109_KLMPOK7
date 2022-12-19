@@ -18,5 +18,14 @@ namespace Exercise
             luthfi = null;
         }
 
-        
+        public void addNumb()
+        {
+            int no;
+            Console.WriteLine("Enter a number: ");
+            no = Convert.ToInt32(Console.ReadLine());
+            Node newnode = new Node();
+            newnode.number = no;
+
+        }
+    }
 }
