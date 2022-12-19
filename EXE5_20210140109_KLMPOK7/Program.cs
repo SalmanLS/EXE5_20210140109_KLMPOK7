@@ -49,5 +49,12 @@ namespace Exercise
 
             }
         }
+        public bool listEmpty()
+        {
+            if (salman == null)
+                return true;
+            else
+                return false;
+        }
     }
 }
