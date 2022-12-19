@@ -80,5 +80,59 @@ namespace Exercise
             }
         }
     }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Queue q = new Queue();
+            while (true)
+            {
+                try
+                {
+                    Console.WriteLine("\n Menu ");
+                    Console.WriteLine("a. Inset Number");
+                    Console.WriteLine("b. Delete Number");
+                    Console.WriteLine("c. Display");
+                    Console.WriteLine("d. Exit");
+                    Console.Write("Choice a-d :");
+                    char ch = Convert.ToChar(Console.ReadLine());
+                    switch (ch)
+                    {
+                        case 'a':
+                            {
+                                q.addNumb();
+                            }
+                            break;
+                        case 'b':
+                            {
+                                if (q.listEmpty())
+                                {
+                                    Console.WriteLine("List is empty. ");
+                                    break;
+                                }
+                                q.delNumb();
+                            }
+                            break;
+                        case 'c':
+                            {
+                                q.displayNumb();
+                            }
+                            break;
+                        case 'd':
+                            return;
+                        default:
+                            {
+                                Console.WriteLine("\n Invalid Option");
+                                break;
+                            }
+                    }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("\n Check again!.");
+                }
+            }
+        }
+    }
 
 }
