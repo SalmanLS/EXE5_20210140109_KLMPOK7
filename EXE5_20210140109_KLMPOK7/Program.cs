@@ -56,5 +56,12 @@ namespace Exercise
             else
                 return false;
         }
+
+        public void delNumb()
+        {
+            Node curr;
+            curr = salman;
+            salman = salman.next;
+        }
     }
 }
